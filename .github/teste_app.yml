@@ -1,0 +1,32 @@
+name: GitHub Actions - Testando Aplicação com com Pytest
+run-name: Iniciando testes 
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Usando Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Dependências
+        run: |
+          python -m pip install --upgrade pip
+          pip install \
+            pytest==8.4.1 \
+            pytest-asyncio==1.1.0 \
+            pydantic==2.11.7 \
+            SQLAlchemy==2.0.41
+
+      - name: Rodando teste
+        run: |
+          pytest

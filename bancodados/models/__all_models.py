@@ -1,0 +1,1 @@
+from bancodados.models.FichaTecnicaORM import ModelFichaTecnica
