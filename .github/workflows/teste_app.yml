@@ -10,8 +10,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout do código
-        uses: actions/checkout@v4
 
       - name: Usando Python 3.11
         uses: actions/setup-python@v5
@@ -24,9 +22,11 @@ jobs:
           pip install \
             pytest==8.4.1 \
             pytest-asyncio==1.1.0 \
+            pytest-cov==6.2.1 \
             pydantic==2.11.7 \
             SQLAlchemy==2.0.41
 
       - name: Rodando teste
         run: |
-          pytest
+          echo "iniciando o teste"
+          pytest --cov --cov-report=term-missing
