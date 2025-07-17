@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: test
         uses: actions/checkout@v4
       - name: Usando Python 3.11
         uses: actions/setup-python@v5
