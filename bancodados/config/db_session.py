@@ -6,8 +6,11 @@ from sqlalchemy.ext.asyncio import AsyncEngine
 from sqlalchemy.ext.asyncio import create_async_engine
 from bancodados.models.model_base import ModelBase
 
+usuario = "postgres"
+senha = "xxx"
+
 __asyncEngine:Optional[AsyncEngine] = None
-database_postgresql = "postgresql+asyncpg://postgres:xxx@localhost:5432/ficatecnica"
+database_postgresql = f"postgresql+asyncpg://{usuario}:{senha}@localhost:5432/ficatecnica"
 database_sqlite = "sqlite+aiosqlite:///"
 
 def create_engine(sqlite: bool = False) -> AsyncEngine:
