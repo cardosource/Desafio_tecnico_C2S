@@ -28,5 +28,4 @@ pip install -q langchain langchain_community langchain-huggingface langchainhub 
 
 Para usar o modelo precisa ter um gpu, para fins demostrativo e reserva apresento a solução usando google colab, que disponibiliza GPU
 
-[Link do código google colab ]([https://colab.research.google.com/drive/1TYnPwXZ6fbIwPcEs2cdSowiPTRlN8gIX#scrollTo=HV6F8YcLaWJp](https://colab.research.google.com/drive/1TYnPwXZ6fbIwPcEs2cdSowiPTRlN8gIX#scrollTo=HV6F8YcLaWJp))
-
+[Link do código google colab ](https://colab.research.google.com/drive/1TYnPwXZ6fbIwPcEs2cdSowiPTRlN8gIX#scrollTo=HV6F8YcLaWJp)
