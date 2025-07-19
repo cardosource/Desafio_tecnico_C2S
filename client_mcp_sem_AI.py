@@ -72,7 +72,7 @@ async def main():
             print("Conteúdo bruto:", conteudo)
             return
 
-        # ✅ Corrigido: garantir que seja uma lista de dicionários
+    
         if isinstance(fichas, dict):
             fichas = [fichas]
         elif isinstance(fichas, str):
@@ -98,5 +98,3 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
-
-#sudo -u postgres psql -d ficatecnica
